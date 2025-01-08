@@ -9,9 +9,10 @@
 </head>
 
 <body>
-  <form action="/add" method="post">
+  <form>
     <input type="text" name="country" autofocus placeholder="<%= locals.error ? error :  'Enter country name'%>">
-    <button type="submit">Add</button>
+    <button type="submit" formmethod="post" formaction="/add">Add</button>
+    <button type="reset">Clear</button>
   </form>
 
   <section class="ag-canvas">

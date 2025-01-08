@@ -34,11 +34,14 @@ async function checkVisited() {
 }
 
 // Routes
+
+// GET
 app.get('/', async (req, res) => {
   const countries = await checkVisited();
   res.render('index.ejs', { countries: countries, total: countries.length });
 });
 
+// POST
 app.post('/add', async (req, res) => {
   // User input
   const countryInput = req.body.country;
